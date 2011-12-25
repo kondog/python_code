@@ -1,0 +1,74 @@
+Dec 25 08:06:16 kondo-CF-W5AW1AXS rsyslogd: [origin software="rsyslogd" swVersion="5.8.1" x-pid="572" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Dec 25 08:06:16 kondo-CF-W5AW1AXS rsyslogd: [origin software="rsyslogd" swVersion="5.8.1" x-pid="572" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Dec 25 08:06:41 kondo-CF-W5AW1AXS anacron[1091]: Job `cron.daily' terminated
+Dec 25 08:06:41 kondo-CF-W5AW1AXS anacron[1091]: Job `cron.weekly' started
+Dec 25 08:06:41 kondo-CF-W5AW1AXS anacron[4386]: Updated timestamp for job `cron.weekly' to 2011-12-25
+Dec 25 08:08:04 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting due to inactivity
+Dec 25 08:08:04 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting was requested
+Dec 25 08:08:04 kondo-CF-W5AW1AXS dbus[595]: [system] Activating service name='org.debian.apt' (using servicehelper)
+Dec 25 08:08:05 kondo-CF-W5AW1AXS AptDaemon: INFO: Initializing daemon
+Dec 25 08:08:05 kondo-CF-W5AW1AXS dbus[595]: [system] Successfully activated service 'org.debian.apt'
+Dec 25 08:08:05 kondo-CF-W5AW1AXS AptDaemon: INFO: UpgradeSystem() was called with safe mode: 1
+Dec 25 08:08:05 kondo-CF-W5AW1AXS AptDaemon.Trans: INFO: Simulate was called
+Dec 25 08:08:05 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Simulating trans: /org/debian/apt/transaction/0beb017a76a74463b0dee9763c24c839
+Dec 25 08:08:08 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Upgrade system with safe mode: 1
+Dec 25 08:09:49 kondo-CF-W5AW1AXS anacron[1091]: Job `cron.weekly' terminated
+Dec 25 08:09:49 kondo-CF-W5AW1AXS anacron[1091]: Job `cron.monthly' started
+Dec 25 08:09:49 kondo-CF-W5AW1AXS anacron[1091]: Job `cron.monthly' terminated
+Dec 25 08:09:49 kondo-CF-W5AW1AXS anacron[4488]: Updated timestamp for job `cron.monthly' to 2011-12-25
+Dec 25 08:09:49 kondo-CF-W5AW1AXS anacron[1091]: Normal exit (3 jobs run)
+Dec 25 08:13:06 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting due to inactivity
+Dec 25 08:13:06 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting was requested
+Dec 25 08:13:06 kondo-CF-W5AW1AXS dbus[595]: [system] Activating service name='org.debian.apt' (using servicehelper)
+Dec 25 08:13:06 kondo-CF-W5AW1AXS AptDaemon: INFO: Initializing daemon
+Dec 25 08:13:06 kondo-CF-W5AW1AXS dbus[595]: [system] Successfully activated service 'org.debian.apt'
+Dec 25 08:13:06 kondo-CF-W5AW1AXS AptDaemon: INFO: UpgradeSystem() was called with safe mode: 1
+Dec 25 08:13:07 kondo-CF-W5AW1AXS AptDaemon.Trans: INFO: Simulate was called
+Dec 25 08:13:07 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Simulating trans: /org/debian/apt/transaction/b81496dcc14d4b27888ae1cbd51a040b
+Dec 25 08:13:09 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Upgrade system with safe mode: 1
+Dec 25 08:17:01 kondo-CF-W5AW1AXS CRON[4668]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Dec 25 08:18:07 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting due to inactivity
+Dec 25 08:18:07 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting was requested
+Dec 25 08:18:07 kondo-CF-W5AW1AXS dbus[595]: [system] Activating service name='org.debian.apt' (using servicehelper)
+Dec 25 08:18:07 kondo-CF-W5AW1AXS AptDaemon: INFO: Initializing daemon
+Dec 25 08:18:07 kondo-CF-W5AW1AXS dbus[595]: [system] Successfully activated service 'org.debian.apt'
+Dec 25 08:18:07 kondo-CF-W5AW1AXS AptDaemon: INFO: UpgradeSystem() was called with safe mode: 1
+Dec 25 08:18:07 kondo-CF-W5AW1AXS AptDaemon.Trans: INFO: Simulate was called
+Dec 25 08:18:07 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Simulating trans: /org/debian/apt/transaction/5076e63c2b38496dadc0a6e0f0133dc3
+Dec 25 08:18:10 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Upgrade system with safe mode: 1
+Dec 25 08:23:08 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting due to inactivity
+Dec 25 08:23:08 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting was requested
+Dec 25 08:23:08 kondo-CF-W5AW1AXS dbus[595]: [system] Activating service name='org.debian.apt' (using servicehelper)
+Dec 25 08:23:08 kondo-CF-W5AW1AXS AptDaemon: INFO: Initializing daemon
+Dec 25 08:23:08 kondo-CF-W5AW1AXS dbus[595]: [system] Successfully activated service 'org.debian.apt'
+Dec 25 08:23:08 kondo-CF-W5AW1AXS AptDaemon: INFO: UpgradeSystem() was called with safe mode: 1
+Dec 25 08:23:08 kondo-CF-W5AW1AXS AptDaemon.Trans: INFO: Simulate was called
+Dec 25 08:23:08 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Simulating trans: /org/debian/apt/transaction/c8f4aa3351cb4fd197cbb9e0da0c2f2e
+Dec 25 08:23:11 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Upgrade system with safe mode: 1
+Dec 25 08:28:09 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting due to inactivity
+Dec 25 08:28:09 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting was requested
+Dec 25 08:28:09 kondo-CF-W5AW1AXS dbus[595]: [system] Activating service name='org.debian.apt' (using servicehelper)
+Dec 25 08:28:09 kondo-CF-W5AW1AXS AptDaemon: INFO: Initializing daemon
+Dec 25 08:28:09 kondo-CF-W5AW1AXS dbus[595]: [system] Successfully activated service 'org.debian.apt'
+Dec 25 08:28:09 kondo-CF-W5AW1AXS AptDaemon: INFO: UpgradeSystem() was called with safe mode: 1
+Dec 25 08:28:09 kondo-CF-W5AW1AXS AptDaemon.Trans: INFO: Simulate was called
+Dec 25 08:28:09 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Simulating trans: /org/debian/apt/transaction/6a4538f162f646f9b44edf69a36f6bd8
+Dec 25 08:28:12 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Upgrade system with safe mode: 1
+Dec 25 08:33:10 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting due to inactivity
+Dec 25 08:33:10 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting was requested
+Dec 25 08:33:10 kondo-CF-W5AW1AXS dbus[595]: [system] Activating service name='org.debian.apt' (using servicehelper)
+Dec 25 08:33:10 kondo-CF-W5AW1AXS AptDaemon: INFO: Initializing daemon
+Dec 25 08:33:10 kondo-CF-W5AW1AXS dbus[595]: [system] Successfully activated service 'org.debian.apt'
+Dec 25 08:33:10 kondo-CF-W5AW1AXS AptDaemon: INFO: UpgradeSystem() was called with safe mode: 1
+Dec 25 08:33:10 kondo-CF-W5AW1AXS AptDaemon.Trans: INFO: Simulate was called
+Dec 25 08:33:10 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Simulating trans: /org/debian/apt/transaction/3e45edb8687d40c3807cac9c90a46ce4
+Dec 25 08:33:13 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Upgrade system with safe mode: 1
+Dec 25 08:38:11 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting due to inactivity
+Dec 25 08:38:11 kondo-CF-W5AW1AXS AptDaemon: INFO: Quitting was requested
+Dec 25 08:38:11 kondo-CF-W5AW1AXS dbus[595]: [system] Activating service name='org.debian.apt' (using servicehelper)
+Dec 25 08:38:11 kondo-CF-W5AW1AXS AptDaemon: INFO: Initializing daemon
+Dec 25 08:38:11 kondo-CF-W5AW1AXS dbus[595]: [system] Successfully activated service 'org.debian.apt'
+Dec 25 08:38:11 kondo-CF-W5AW1AXS AptDaemon: INFO: UpgradeSystem() was called with safe mode: 1
+Dec 25 08:38:11 kondo-CF-W5AW1AXS AptDaemon.Trans: INFO: Simulate was called
+Dec 25 08:38:11 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Simulating trans: /org/debian/apt/transaction/8a9c1426c6e74ce39d96fd35ddb326f7
+Dec 25 08:38:14 kondo-CF-W5AW1AXS AptDaemon.Worker: INFO: Upgrade system with safe mode: 1

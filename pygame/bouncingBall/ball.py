@@ -2,25 +2,30 @@
 import pygame
 from pygame.locals import *
 
+from systemData import SysData
+
 class BallObj():
     def __init__(self):
-        self._initSpeed     = -5
-        self._speed         = [0,0]
+        self.sysData        = SysData()
+        self._initSpeed     = self.sysData.ballInitSpeed
+        self._speed         = self.sysData.ballSpeed
         self._ballObj       = None
         self._ballrect      = None
-        self._initSpeed_MAX = -10
-        self._initSpeed_MIN = 0
+        self._initSpeed_MAX = self.sysData.ballInitSpeed_MAX
+        self._initSpeed_MIN = self.sysData.ballInitSpeed_MIN
 
     # Obj
     def setObj( self, imgStr ):
         self._ballObj = pygame.image.load( imgStr )
     def getObj( self ):
         return self._ballObj
+
     # InitSpeed
     def setInitSpeed( self, initSpeed ):
         self._initSpeed = -1 * initSpeed
     def getInitSpeed( self ):
         return - self._initSpeed
+
     # Speed
     def setSpeed( self, speedX, speedY ):
         self._speed = [speedX, speedY]
@@ -32,6 +37,7 @@ class BallObj():
         return self._speed[0]
     def getSpeedY( self ):
         return self._speed[1]
+
     # Rectunglar
     def getBallrect( self ):
         return self._ballrect
@@ -49,8 +55,12 @@ class BallObj():
         print "ballMove      : " + str( self._ballrect )
         self._ballrect = self._ballrect.move( self._speed )
 
+    # 次のスクリーンのボールの位置を決定する
     def decideBallPosition( self, keyList, size):
+        # キー押下時の位置を決定する
         self.moveAs2Key( keyList )
+
+        # 壁に衝突した時の動作
         if self._ballrect.left < 0 or self._ballrect.right > size[0]:
             self._speed[0] = -self._speed[0]
         if self._ballrect.bottom >= size[1]:
@@ -58,6 +68,7 @@ class BallObj():
         else:
             self._speed[1] = self._speed[1] + 1 
 
+    # キー押下時の位置を決定する
     def moveAs2Key( self, keyList ):
         print self._initSpeed
         if keyList[K_LEFT]:

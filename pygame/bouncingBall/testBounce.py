@@ -4,55 +4,58 @@ import unittest
 import pygame
 from pygame.locals import *
 
-from bounce import PygScreen
-from ball import BallObj
-from bar  import BarObj
+from bounce      import PygScreen
+from ball        import BallObj
+from bar         import BarObj
 from objMediator import Mediator
+from systemData  import SysData
 
 class TestFunctions( unittest.TestCase ):
-    def test_decideBallPosition(self):
+    sysData = SysData()
+
+    # ボールの位置とスピードが正しく移行するかどうか
+    def isCorrectSpeedChange( self, position, speed_before, key, speed_after ):
+        # init object.
         pygame.init()
         screen = PygScreen()
         screen.setSize(100,100)
-        ballObj = BallObj()
-        ballObj.setObj("img/ball.bmp")
-        ballObj.setRect()
+        ball = BallObj()
+        ball.setObj( self.sysData.ballBmp )
+        ball.setRect()
 
-        # ボールのX値がスクリーンサイズオーバの時スピードのX値が逆転
-        ballObj.setBallrectRight(500)
-        ballObj.setSpeed(1,1)
+        # 判定処理
+        ball.setBallrectLeft( position[0] )
+        ball.setBallrectBottom( position[1] )
+        ball.setSpeed( speed_before[0], speed_before[1] )
         pressed_keys_cp = \
             self.makeListFromKeyTuple( pygame.key.get_pressed() )
-        ballObj.decideBallPosition( pressed_keys_cp, screen.getSize() )
-        self.assertTrue( ballObj.getSpeedX() == -1 )
+        if key != None:
+            pressed_keys_cp[key] = 1
+
+        ball.decideBallPosition( pressed_keys_cp, screen.getSize() )
+        return speed_after == ball.getSpeed()
+
+    def test_decideBallPosition(self):
+        # ボールのX値がスクリーンサイズオーバの時スピードのX値が逆転
+        self.assertTrue( self.isCorrectSpeedChange( 
+                [500,50], [1,1], None,
+                [-1,2],))
 
         # ボールのY値がスクリーンサイズオーバの時スピードのY値が初速
-        ballObj.setBallrectBottom(240)
-        ballObj.setSpeed(1,1)
-        pressed_keys_cp = \
-            self.makeListFromKeyTuple( pygame.key.get_pressed() )
-        ballObj.decideBallPosition( pressed_keys_cp, screen.getSize() )
-        self.assertTrue( ballObj.getSpeedY() == -5 )
+        self.assertTrue( self.isCorrectSpeedChange( 
+                [50,200], [1,1], None,
+                [1,self.sysData.ballInitSpeed],))
 
         # ボールのY値がスクリーンサイズ内の時スピードのY値が減速
-        ballObj.setBallrectBottom(1)
-        ballObj.setSpeed(1,-3)
-        pressed_keys_cp = \
-            self.makeListFromKeyTuple( pygame.key.get_pressed() )
-        ballObj.decideBallPosition( pressed_keys_cp, screen.getSize() )
-        self.assertTrue( ballObj.getSpeedY() == -2 )
+        self.assertTrue( self.isCorrectSpeedChange( 
+                [50,50], [2,-3], None,
+                [2,-2],))
 
         # ボールのY値がスクリーンサイズ内の時スピードのY値が減速
         # かつ右キーが押されていた時スピードのX値が増大
-        ballObj.setBallrectRight(5)
-        ballObj.setBallrectLeft(5)
-        ballObj.setBallrectBottom(1)
-        ballObj.setSpeed(1,-3)
-        pressed_keys_cp = \
-            self.makeListFromKeyTuple( pygame.key.get_pressed() )
-        pressed_keys_cp[K_RIGHT] = 1
-        ballObj.decideBallPosition( pressed_keys_cp, screen.getSize() )
-        self.assertTrue( [2,-2] == ballObj.getSpeed() )
+        self.assertTrue( self.isCorrectSpeedChange( 
+                [50,50], [1,-3], K_RIGHT,
+                [2,-2],))
 
     # 試験用に一式のtupleを作成する
     def makeListFromKeyTuple( self, keyTuple ):

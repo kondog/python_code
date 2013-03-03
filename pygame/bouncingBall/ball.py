@@ -55,12 +55,12 @@ class BallObj():
         print "ballMove      : " + str( self._ballrect )
         self._ballrect = self._ballrect.move( self._speed )
 
-    # $B<!$N%9%/%j!<%s$N%\!<%k$N0LCV$r7hDj$9$k(B
+    # 次のスクリーンのボールの位置を決定する
     def decideBallPosition( self, keyList, size):
-        # $B%-!<2!2<;~$N0LCV$r7hDj$9$k(B
+        # キー押下時の位置を決定する
         self.moveAs2Key( keyList )
 
-        # $BJI$K>WFM$7$?;~$NF0:n(B
+        # 壁に衝突した時の動作
         if self._ballrect.left < 0 or self._ballrect.right > size[0]:
             self._speed[0] = -self._speed[0]
         if self._ballrect.bottom >= size[1]:
@@ -68,7 +68,7 @@ class BallObj():
         else:
             self._speed[1] = self._speed[1] + 1 
 
-    # $B%-!<2!2<;~$N0LCV$r7hDj$9$k(B
+    # キー押下時の位置を決定する
     def moveAs2Key( self, keyList ):
         print self._initSpeed
         if keyList[K_LEFT]:

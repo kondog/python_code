@@ -57,7 +57,7 @@ if __name__ == "__main__":
         ball.ballMove( )
         ball.decideBallPosition(pygame.key.get_pressed(), screen.getSize() )
 
-        # $B%\!<%k$H%P!<$,>WFM$7$?:]$NF0:n(B
+        # ボールとバーが衝突した際の動作
         mediator.judgeConflictBallAndBar( ball, bar )
 
         screen.displayFill( white )

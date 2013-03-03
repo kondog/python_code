@@ -13,7 +13,7 @@ from systemData  import SysData
 class TestFunctions( unittest.TestCase ):
     sysData = SysData()
 
-    # $B%\!<%k$N0LCV$H%9%T!<%I$,@5$7$/0\9T$9$k$+$I$&$+(B
+    # ボールの位置とスピードが正しく移行するかどうか
     def isCorrectSpeedChange( self, position, speed_before, key, speed_after ):
         # init object.
         pygame.init()
@@ -23,7 +23,7 @@ class TestFunctions( unittest.TestCase ):
         ball.setObj( self.sysData.ballBmp )
         ball.setRect()
 
-        # $BH=Dj=hM}(B
+        # 判定処理
         ball.setBallrectLeft( position[0] )
         ball.setBallrectBottom( position[1] )
         ball.setSpeed( speed_before[0], speed_before[1] )
@@ -36,28 +36,28 @@ class TestFunctions( unittest.TestCase ):
         return speed_after == ball.getSpeed()
 
     def test_decideBallPosition(self):
-        # $B%\!<%k$N(BX$BCM$,%9%/%j!<%s%5%$%:%*!<%P$N;~%9%T!<%I$N(BX$BCM$,5UE>(B
+        # ボールのX値がスクリーンサイズオーバの時スピードのX値が逆転
         self.assertTrue( self.isCorrectSpeedChange( 
                 [500,50], [1,1], None,
                 [-1,2],))
 
-        # $B%\!<%k$N(BY$BCM$,%9%/%j!<%s%5%$%:%*!<%P$N;~%9%T!<%I$N(BY$BCM$,=iB.(B
+        # ボールのY値がスクリーンサイズオーバの時スピードのY値が初速
         self.assertTrue( self.isCorrectSpeedChange( 
                 [50,200], [1,1], None,
                 [1,self.sysData.ballInitSpeed],))
 
-        # $B%\!<%k$N(BY$BCM$,%9%/%j!<%s%5%$%:Fb$N;~%9%T!<%I$N(BY$BCM$,8:B.(B
+        # ボールのY値がスクリーンサイズ内の時スピードのY値が減速
         self.assertTrue( self.isCorrectSpeedChange( 
                 [50,50], [2,-3], None,
                 [2,-2],))
 
-        # $B%\!<%k$N(BY$BCM$,%9%/%j!<%s%5%$%:Fb$N;~%9%T!<%I$N(BY$BCM$,8:B.(B
-        # $B$+$D1&%-!<$,2!$5$l$F$$$?;~%9%T!<%I$N(BX$BCM$,A}Bg(B
+        # ボールのY値がスクリーンサイズ内の時スピードのY値が減速
+        # かつ右キーが押されていた時スピードのX値が増大
         self.assertTrue( self.isCorrectSpeedChange( 
                 [50,50], [1,-3], K_RIGHT,
                 [2,-2],))
 
-    # $B;n83MQ$K0l<0$N(Btuple$B$r:n@.$9$k(B
+    # 試験用に一式のtupleを作成する
     def makeListFromKeyTuple( self, keyTuple ):
         pressed_keys_cp = []
         for keyList in keyTuple:
@@ -73,7 +73,7 @@ class TestFunctions( unittest.TestCase ):
         ballObj.setObj("img/ball.bmp")
         ballObj.setRect()
 
-        # Left$B%-!<$,2!$5$l$?;~(BspeedX$B$,(B1$B8:;;(B
+        # Leftキーが押された時speedXが1減算
         ballObj.setSpeed( 1,1 )
         pressed_keys_cp = \
             self.makeListFromKeyTuple( pygame.key.get_pressed() )
@@ -81,7 +81,7 @@ class TestFunctions( unittest.TestCase ):
         ballObj.moveAs2Key( pressed_keys_cp )
         self.assertTrue( [0,1] == ballObj.getSpeed() )
 
-        # Right$B%-!<$,2!$5$l$?;~(BspeedX$B$,(B1$B2C;;(B
+        # Rightキーが押された時speedXが1加算
         ballObj.setSpeed( 1,1 )
         pressed_keys_cp = \
             self.makeListFromKeyTuple( pygame.key.get_pressed() )
@@ -89,7 +89,7 @@ class TestFunctions( unittest.TestCase ):
         ballObj.moveAs2Key( pressed_keys_cp )
         self.assertTrue( [2,1] == ballObj.getSpeed() )
 
-        # Up$B%-!<$,2!$5$l$?;~(BinitSpeed$B$,(B1$B2C;;(B
+        # Upキーが押された時initSpeedが1加算
         ballObj.setInitSpeed( 5 )
         pressed_keys_cp = \
             self.makeListFromKeyTuple( pygame.key.get_pressed() )
@@ -97,7 +97,7 @@ class TestFunctions( unittest.TestCase ):
         ballObj.moveAs2Key( pressed_keys_cp )
         self.assertTrue( 6 == ballObj.getInitSpeed() )
 
-        # Up$B%-!<$,2!$5$l$?;~(BinitSpeed$B$,(B1$B2C;;(B
+        # Upキーが押された時initSpeedが1加算
         ballObj.setInitSpeed( 20 )
         pressed_keys_cp = \
             self.makeListFromKeyTuple( pygame.key.get_pressed() )
@@ -105,7 +105,7 @@ class TestFunctions( unittest.TestCase ):
         ballObj.moveAs2Key( pressed_keys_cp )
         self.assertTrue( 20 == ballObj.getInitSpeed() )
 
-        # Down$B%-!<$,2!$5$l$?;~(BinitSpeed$B$,(B1$B2C;;(B
+        # Downキーが押された時initSpeedが1加算
         ballObj.setInitSpeed( 1 )
         pressed_keys_cp = \
             self.makeListFromKeyTuple( pygame.key.get_pressed() )
@@ -114,8 +114,8 @@ class TestFunctions( unittest.TestCase ):
         print "test initspeed "+str(ballObj.getInitSpeed())
         self.assertTrue( 0 == ballObj.getInitSpeed() )
 
-        # Down$B%-!<$,2!$5$l$?;~(BinitSpeed$B$,(B1$B2C;;(B
-        # initSpeed$B$O(B0$B0J2<$K$J$i$J$$(B
+        # Downキーが押された時initSpeedが1加算
+        # initSpeedは0以下にならない
         ballObj.setInitSpeed( 0 )
         pressed_keys_cp = \
             self.makeListFromKeyTuple( pygame.key.get_pressed() )

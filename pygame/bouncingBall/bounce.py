@@ -7,6 +7,7 @@ from pygame.locals import *
 
 from ball          import BallObj
 from bar           import BarObj
+from warp          import WarpObj
 from objMediator   import Mediator
 from systemData    import SysData
 
@@ -41,11 +42,15 @@ if __name__ == "__main__":
     ball = BallObj()
     ball.setSpeed( 0, -5 )
     ball.setObj( sysData.ballBmp )
-    ball.setRect_pos( 100, 240 )
+    ball.setRect_pos( 50, 240 )
 
     bar = BarObj()
     bar.setObj( sysData.barBmp)
     bar.setRect_pos( 150, 200 )
+
+    warp = WarpObj()
+    warp.setObj( sysData.warpBmp )
+    warp.setRect_pos( 230, 150 )
 
     mediator = Mediator()
 
@@ -59,9 +64,11 @@ if __name__ == "__main__":
 
         # ボールとバーが衝突した際の動作
         mediator.judgeConflictBallAndBar( ball, bar )
+        mediator.judgeConflictBallAndWarp( ball, warp, 50 )
 
         screen.displayFill( white )
         screen.displayBlit( ball.getObj(), ball.getBallrect() )
         screen.displayBlit( bar.getObj(),  bar.getRect() )
+        screen.displayBlit( warp.getObj(),  warp.getRect() )
         pygame.display.flip()
 

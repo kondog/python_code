@@ -7,6 +7,7 @@ from pygame.locals import *
 from bounce      import PygScreen
 from ball        import BallObj
 from bar         import BarObj
+from warp        import WarpObj
 from objMediator import Mediator
 from systemData  import SysData
 
@@ -38,8 +39,10 @@ class TestFunctions( unittest.TestCase ):
     def test_decideBallPosition(self):
         # ボールのX値がスクリーンサイズオーバの時スピードのX値が逆転
         self.assertTrue( self.isCorrectSpeedChange( 
-                [500,50], [1,1], None,
+                [500,50],   [1,1],         None,
+               #ボール位置, 試験対象speed, 押下キー
                 [-1,2],))
+               #試験後のspeed
 
         # ボールのY値がスクリーンサイズオーバの時スピードのY値が初速
         self.assertTrue( self.isCorrectSpeedChange( 
@@ -129,6 +132,7 @@ class TestFunctions( unittest.TestCase ):
         bar.setObj( "img/bar.bmp" )
         bar.setRect_pos( 150, 120 )
 
+    # ボールとバーのテスト
     def test_BallAndBarObj( self ):
         screen = PygScreen()
         screen.setSize(10,10)
@@ -138,9 +142,12 @@ class TestFunctions( unittest.TestCase ):
         bar.setObj( "img/bar.bmp" )
         mediator = Mediator()
 
+        # 衝突した際の動作
         self.setPosition( 
                 ball, 150, 120, 
+               #ObjA,  X  , Y
                 bar,  150, 120 )
+               #ObjB,  X  , Y
         self.assertTrue( True == mediator.isBallAndBarConflict( 
             ball.getBallrect(), bar.getRect() ) )
 
@@ -169,6 +176,32 @@ class TestFunctions( unittest.TestCase ):
         mediator.judgeConflictBallAndBar( 
             ball, bar )
         self.assertTrue( [1, -5] == ball.getSpeed() )
+
+    def test_BallAndWarpObj( self ):
+        screen = PygScreen()
+        screen.setSize(10,10)
+        ball = BallObj()
+        ball.setObj("img/ball.bmp")
+        warp = WarpObj()
+        warp.setObj( "img/warp.bmp" )
+        mediator = Mediator()
+
+        self.setPosition( 
+                ball, 150, 120, 
+               #ObjA,  X  , Y
+                warp,  150, 120 )
+               #ObjB,  X  , Y
+        self.assertTrue( True == mediator.isBallAndBarConflict( 
+            ball.getBallrect(), warp.getRect() ) )
+        ball.setSpeed( 1,1 )
+        self.setPosition( 
+                ball, 80, 120, 
+                warp, 80, 120 )
+        mediator.judgeConflictBallAndWarp( 
+            ball, warp, 100 )
+        self.assertTrue( (100,120) == ball.getBallrect().center)
+        self.assertTrue( [0,0] == ball.getSpeed() )
+
 
     def setPosition( self, 
             ball, ballY, ballX,

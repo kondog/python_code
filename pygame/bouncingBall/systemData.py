@@ -11,6 +11,7 @@ class SysData():
         self._screenSizeY       = 240
         self._ballBmp           = "img/ball.bmp"
         self._barBmp            = "img/bar.bmp"
+        self._warpBMP           = "img/warp.bmp"
         self._waitTime    = 0.05
     def getBallInitSpeed(self):
         return self._ballInitSpeed
@@ -30,6 +31,8 @@ class SysData():
         return self._ballBmp
     def getBarBmp( self ):
         return self._barBmp
+    def getWarpBmp( self ):
+        return self._warpBMP
     def getScreenWait( self ):
         return self._waitTime
     ballInitSpeed     = property( getBallInitSpeed )
@@ -41,5 +44,6 @@ class SysData():
     screenSizeY       = property( getScreenSizeY )
     ballBmp           = property( getBallBmp )
     barBmp            = property( getBarBmp )
+    warpBmp           = property( getWarpBmp)
     waitTime          = property( getScreenWait )
 

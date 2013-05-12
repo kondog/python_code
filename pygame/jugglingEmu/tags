@@ -4,35 +4,167 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+$.fn.autogrow.resize	doc/_build/html/_static/websupport.js	/^  $.fn.autogrow.resize = function(textarea) {$/;"	f
+$.fn.comment	doc/_build/html/_static/websupport.js	/^  $.fn.comment = function() {$/;"	f
+ALLSPHINXOPTS	doc/Makefile	/^ALLSPHINXOPTS   = -d $(BUILDDIR)\/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .$/;"	m
+ALLSPHINXOPTS	doc/make.bat	/^	set ALLSPHINXOPTS=-D latex_paper_size=%PAPER% %ALLSPHINXOPTS%$/;"	v
+ALLSPHINXOPTS	doc/make.bat	/^set ALLSPHINXOPTS=-d %BUILDDIR%\/doctrees %SPHINXOPTS% .$/;"	v
+ArrayProto	doc/_build/html/_static/underscore.js	/^  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;$/;"	v
+BUILDDIR	doc/Makefile	/^BUILDDIR      = _build$/;"	m
+BUILDDIR	doc/make.bat	/^set BUILDDIR=_build$/;"	v
 BallObj	ball.py	/^class BallObj():$/;"	c
 BarObj	bar.py	/^class BarObj():$/;"	c
+Documentation.TRANSLATIONS	doc/_build/html/_static/doctools.js	/^  TRANSLATIONS : {},$/;"	p
+Documentation.init	doc/_build/html/_static/doctools.js	/^  init : function() {$/;"	m
+I18NSPHINXOPTS	doc/Makefile	/^I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .$/;"	m
+I18NSPHINXOPTS	doc/make.bat	/^	set I18NSPHINXOPTS=-D latex_paper_size=%PAPER% %I18NSPHINXOPTS%$/;"	v
+I18NSPHINXOPTS	doc/make.bat	/^set I18NSPHINXOPTS=%SPHINXOPTS% .$/;"	v
 Mediator	objMediator.py	/^class Mediator():$/;"	c
+PAPER	doc/Makefile	/^PAPER         =$/;"	m
+PAPER	doc/make.bat	/^	echo.  latex      to make LaTeX files, you can set PAPER=a4 or PAPER=letter$/;"	v
+PAPEROPT_a4	doc/Makefile	/^PAPEROPT_a4     = -D latex_paper_size=a4$/;"	m
+PAPEROPT_letter	doc/Makefile	/^PAPEROPT_letter = -D latex_paper_size=letter$/;"	m
+PLURAL_EXPR	doc/_build/html/_static/doctools.js	/^    this.PLURAL_EXPR = new Function('n', 'return +(' + catalog.plural_expr + ')');$/;"	f
 PygScreen	main.py	/^class PygScreen():$/;"	c
+SPHINXBUILD	doc/Makefile	/^SPHINXBUILD   = sphinx-build$/;"	m
+SPHINXBUILD	doc/make.bat	/^	set SPHINXBUILD=sphinx-build$/;"	v
+SPHINXOPTS	doc/Makefile	/^SPHINXOPTS    =$/;"	m
+Search._index	doc/_build/html/_static/searchtools.js	/^  _index : null,$/;"	p
+Search._pulse_status	doc/_build/html/_static/searchtools.js	/^  _pulse_status : -1,$/;"	p
+Search._queued_query	doc/_build/html/_static/searchtools.js	/^  _queued_query : null,$/;"	p
+SiteSwapContainer	siteswapContainer.py	/^class SiteSwapContainer():$/;"	c
+Stemmer	doc/_build/html/_static/searchtools.js	/^var Stemmer = function() {$/;"	c
+Stemmer.stemWord	doc/_build/html/_static/searchtools.js	/^  this.stemWord = function (w) {$/;"	m
+Stemmer.step2list.alism	doc/_build/html/_static/searchtools.js	/^    alism: 'al',$/;"	p
+Stemmer.step2list.aliti	doc/_build/html/_static/searchtools.js	/^    aliti: 'al',$/;"	p
+Stemmer.step2list.alli	doc/_build/html/_static/searchtools.js	/^    alli: 'al',$/;"	p
+Stemmer.step2list.anci	doc/_build/html/_static/searchtools.js	/^    anci: 'ance',$/;"	p
+Stemmer.step2list.ation	doc/_build/html/_static/searchtools.js	/^    ation: 'ate',$/;"	p
+Stemmer.step2list.ational	doc/_build/html/_static/searchtools.js	/^    ational: 'ate',$/;"	p
+Stemmer.step2list.ator	doc/_build/html/_static/searchtools.js	/^    ator: 'ate',$/;"	p
+Stemmer.step2list.biliti	doc/_build/html/_static/searchtools.js	/^    biliti: 'ble',$/;"	p
+Stemmer.step2list.bli	doc/_build/html/_static/searchtools.js	/^    bli: 'ble',$/;"	p
+Stemmer.step2list.eli	doc/_build/html/_static/searchtools.js	/^    eli: 'e',$/;"	p
+Stemmer.step2list.enci	doc/_build/html/_static/searchtools.js	/^    enci: 'ence',$/;"	p
+Stemmer.step2list.entli	doc/_build/html/_static/searchtools.js	/^    entli: 'ent',$/;"	p
+Stemmer.step2list.fulness	doc/_build/html/_static/searchtools.js	/^    fulness: 'ful',$/;"	p
+Stemmer.step2list.iveness	doc/_build/html/_static/searchtools.js	/^    iveness: 'ive',$/;"	p
+Stemmer.step2list.iviti	doc/_build/html/_static/searchtools.js	/^    iviti: 'ive',$/;"	p
+Stemmer.step2list.ization	doc/_build/html/_static/searchtools.js	/^    ization: 'ize',$/;"	p
+Stemmer.step2list.izer	doc/_build/html/_static/searchtools.js	/^    izer: 'ize',$/;"	p
+Stemmer.step2list.logi	doc/_build/html/_static/searchtools.js	/^    logi: 'log'$/;"	p
+Stemmer.step2list.ousli	doc/_build/html/_static/searchtools.js	/^    ousli: 'ous',$/;"	p
+Stemmer.step2list.ousness	doc/_build/html/_static/searchtools.js	/^    ousness: 'ous',$/;"	p
+Stemmer.step2list.tional	doc/_build/html/_static/searchtools.js	/^    tional: 'tion',$/;"	p
+Stemmer.step3list.alize	doc/_build/html/_static/searchtools.js	/^    alize: 'al',$/;"	p
+Stemmer.step3list.ative	doc/_build/html/_static/searchtools.js	/^    ative: '',$/;"	p
+Stemmer.step3list.ful	doc/_build/html/_static/searchtools.js	/^    ful: '',$/;"	p
+Stemmer.step3list.ical	doc/_build/html/_static/searchtools.js	/^    ical: 'ic',$/;"	p
+Stemmer.step3list.icate	doc/_build/html/_static/searchtools.js	/^    icate: 'ic',$/;"	p
+Stemmer.step3list.iciti	doc/_build/html/_static/searchtools.js	/^    iciti: 'ic',$/;"	p
+Stemmer.step3list.ness	doc/_build/html/_static/searchtools.js	/^    ness: ''$/;"	p
 SysData	systemData.py	/^class SysData():$/;"	c
-TestFunctions	testBounce.py	/^class TestFunctions( unittest.TestCase ):$/;"	c
+TestFunctions	test/testBounce.py	/^class TestFunctions( unittest.TestCase ):$/;"	c
+TestFunctions	test/testSiteswapContainer.py	/^class TestFunctions( unittest.TestCase ):$/;"	c
+_	doc/_build/html/_static/underscore.js	/^  var _ = function(obj) { return new wrapper(obj); };$/;"	f
+_.after	doc/_build/html/_static/underscore.js	/^  _.after = function(times, func) {$/;"	f
+_.bind	doc/_build/html/_static/underscore.js	/^  _.bind = function(func, obj) {$/;"	f
+_.bindAll	doc/_build/html/_static/underscore.js	/^  _.bindAll = function(obj) {$/;"	f
+_.clone	doc/_build/html/_static/underscore.js	/^  _.clone = function(obj) {$/;"	f
+_.compact	doc/_build/html/_static/underscore.js	/^  _.compact = function(array) {$/;"	f
+_.compose	doc/_build/html/_static/underscore.js	/^  _.compose = function() {$/;"	f
+_.debounce	doc/_build/html/_static/underscore.js	/^  _.debounce = function(func, wait) {$/;"	f
+_.defaults	doc/_build/html/_static/underscore.js	/^  _.defaults = function(obj) {$/;"	f
+_.defer	doc/_build/html/_static/underscore.js	/^  _.defer = function(func) {$/;"	f
+_.delay	doc/_build/html/_static/underscore.js	/^  _.delay = function(func, wait) {$/;"	f
+_.extend	doc/_build/html/_static/underscore.js	/^  _.extend = function(obj) {$/;"	f
+_.flatten	doc/_build/html/_static/underscore.js	/^  _.flatten = function(array) {$/;"	f
+_.identity	doc/_build/html/_static/underscore.js	/^  _.identity = function(value) {$/;"	f
+_.indexOf	doc/_build/html/_static/underscore.js	/^  _.indexOf = function(array, item, isSorted) {$/;"	f
+_.intersect	doc/_build/html/_static/underscore.js	/^  _.intersect = function(array) {$/;"	f
+_.invoke	doc/_build/html/_static/underscore.js	/^  _.invoke = function(obj, method) {$/;"	f
+_.isArguments	doc/_build/html/_static/underscore.js	/^  _.isArguments = function(obj) {$/;"	f
+_.isBoolean	doc/_build/html/_static/underscore.js	/^  _.isBoolean = function(obj) {$/;"	f
+_.isDate	doc/_build/html/_static/underscore.js	/^  _.isDate = function(obj) {$/;"	f
+_.isElement	doc/_build/html/_static/underscore.js	/^  _.isElement = function(obj) {$/;"	f
+_.isEmpty	doc/_build/html/_static/underscore.js	/^  _.isEmpty = function(obj) {$/;"	f
+_.isEqual	doc/_build/html/_static/underscore.js	/^  _.isEqual = function(a, b) {$/;"	f
+_.isFunction	doc/_build/html/_static/underscore.js	/^  _.isFunction = function(obj) {$/;"	f
+_.isNaN	doc/_build/html/_static/underscore.js	/^  _.isNaN = function(obj) {$/;"	f
+_.isNull	doc/_build/html/_static/underscore.js	/^  _.isNull = function(obj) {$/;"	f
+_.isNumber	doc/_build/html/_static/underscore.js	/^  _.isNumber = function(obj) {$/;"	f
+_.isRegExp	doc/_build/html/_static/underscore.js	/^  _.isRegExp = function(obj) {$/;"	f
+_.isString	doc/_build/html/_static/underscore.js	/^  _.isString = function(obj) {$/;"	f
+_.isUndefined	doc/_build/html/_static/underscore.js	/^  _.isUndefined = function(obj) {$/;"	f
+_.last	doc/_build/html/_static/underscore.js	/^  _.last = function(array) {$/;"	f
+_.lastIndexOf	doc/_build/html/_static/underscore.js	/^  _.lastIndexOf = function(array, item) {$/;"	f
+_.map	doc/_build/html/_static/underscore.js	/^  _.map = function(obj, iterator, context) {$/;"	f
+_.max	doc/_build/html/_static/underscore.js	/^  _.max = function(obj, iterator, context) {$/;"	f
+_.memoize	doc/_build/html/_static/underscore.js	/^  _.memoize = function(func, hasher) {$/;"	f
+_.min	doc/_build/html/_static/underscore.js	/^  _.min = function(obj, iterator, context) {$/;"	f
+_.mixin	doc/_build/html/_static/underscore.js	/^  _.mixin = function(obj) {$/;"	f
+_.noConflict	doc/_build/html/_static/underscore.js	/^  _.noConflict = function() {$/;"	f
+_.once	doc/_build/html/_static/underscore.js	/^  _.once = function(func) {$/;"	f
+_.pluck	doc/_build/html/_static/underscore.js	/^  _.pluck = function(obj, key) {$/;"	f
+_.range	doc/_build/html/_static/underscore.js	/^  _.range = function(start, stop, step) {$/;"	f
+_.reject	doc/_build/html/_static/underscore.js	/^  _.reject = function(obj, iterator, context) {$/;"	f
+_.size	doc/_build/html/_static/underscore.js	/^  _.size = function(obj) {$/;"	f
+_.sortBy	doc/_build/html/_static/underscore.js	/^  _.sortBy = function(obj, iterator, context) {$/;"	f
+_.sortedIndex	doc/_build/html/_static/underscore.js	/^  _.sortedIndex = function(array, obj, iterator) {$/;"	f
+_.tap	doc/_build/html/_static/underscore.js	/^  _.tap = function(obj, interceptor) {$/;"	f
+_.template	doc/_build/html/_static/underscore.js	/^  _.template = function(str, data) {$/;"	f
+_.templateSettings.evaluate	doc/_build/html/_static/underscore.js	/^    evaluate    : \/<%([\\s\\S]+?)%>\/g,$/;"	p
+_.throttle	doc/_build/html/_static/underscore.js	/^  _.throttle = function(func, wait) {$/;"	f
+_.times	doc/_build/html/_static/underscore.js	/^  _.times = function (n, iterator, context) {$/;"	f
+_.toArray	doc/_build/html/_static/underscore.js	/^  _.toArray = function(iterable) {$/;"	f
+_.uniqueId	doc/_build/html/_static/underscore.js	/^  _.uniqueId = function(prefix) {$/;"	f
+_.values	doc/_build/html/_static/underscore.js	/^  _.values = function(obj) {$/;"	f
+_.without	doc/_build/html/_static/underscore.js	/^  _.without = function(array) {$/;"	f
+_.wrap	doc/_build/html/_static/underscore.js	/^  _.wrap = function(func, wrapper) {$/;"	f
+_.zip	doc/_build/html/_static/underscore.js	/^  _.zip = function() {$/;"	f
 __init__	ball.py	/^    def __init__(self):$/;"	m	class:BallObj
 __init__	bar.py	/^    def __init__( self ):$/;"	m	class:BarObj
 __init__	main.py	/^    def __init__(self):$/;"	m	class:PygScreen
 __init__	objMediator.py	/^    def __init__(self):$/;"	m	class:Mediator
+__init__	siteswapContainer.py	/^    def __init__( self ):$/;"	m	class:SiteSwapContainer
 __init__	systemData.py	/^    def __init__(self):$/;"	m	class:SysData
 accele	systemData.py	/^    accele            = property( getAccele )$/;"	v	class:SysData
-ball1	main.py	/^    ball1 = BallObj()$/;"	v
+acceptComment	doc/_build/html/_static/websupport.js	/^  function acceptComment(id) {$/;"	f
+addComment	doc/_build/html/_static/websupport.js	/^  function addComment(form) {$/;"	f
+appendComments	doc/_build/html/_static/websupport.js	/^  function appendComments(comments, ul) {$/;"	f
 ballBmp	systemData.py	/^    ballBmp           = property( getBallBmp )$/;"	v	class:SysData
 ballInitSpeed	systemData.py	/^    ballInitSpeed     = property( getBallInitSpeed )$/;"	v	class:SysData
 ballInitSpeed_MAX	systemData.py	/^    ballInitSpeed_MAX = property( getBallSpeedMax )$/;"	v	class:SysData
 ballInitSpeed_MIN	systemData.py	/^    ballInitSpeed_MIN = property( getBallSpeedMin )$/;"	v	class:SysData
+ballMakeTiming	main.py	/^    ballMakeTiming  = 0$/;"	v
 ballMove	ball.py	/^    def ballMove( self ):$/;"	m	class:BallObj
+ballShootTiming	main.py	/^    ballShootTiming = 0$/;"	v
 ballSpeed	systemData.py	/^    ballSpeed         = property( getBallSpeed )$/;"	v	class:SysData
-balls	main.py	/^    balls = [$/;"	v
+balls	main.py	/^    balls = []$/;"	v
 barBmp	systemData.py	/^    barBmp            = property( getBarBmp )$/;"	v	class:SysData
 barLeft	main.py	/^    barLeft = BarObj()$/;"	v
 barRight	main.py	/^    barRight = BarObj()$/;"	v
 barY	systemData.py	/^    barY              = property( getBarY )$/;"	v	class:SysData
-changeState	ball.py	/^    def changeState( self ):$/;"	m	class:BallObj
+breaker	doc/_build/html/_static/underscore.js	/^  var breaker = {};$/;"	v
+changeState	ball.py	/^    def changeState( self, ssContainer ):$/;"	m	class:BallObj
+closeReply	doc/_build/html/_static/websupport.js	/^  function closeReply(id) {$/;"	f
+commentTemplate	doc/_build/html/_static/websupport.js	/^  var commentTemplate = '\\$/;"	v
+comp	doc/_build/html/_static/websupport.js	/^      comp = function(a, b) { return a[i] - b[i]; };$/;"	f
+copyright	doc/conf.py	/^copyright = u'2013, kondog'$/;"	v
+createCommentDiv	doc/_build/html/_static/websupport.js	/^  function createCommentDiv(comment) {$/;"	f
 decideBallPosition	ball.py	/^    def decideBallPosition( self, keyList, size):$/;"	m	class:BallObj
+deleteComment	doc/_build/html/_static/websupport.js	/^  function deleteComment(id) {$/;"	f
 displayBlit	main.py	/^    def displayBlit( self, ballObj, ballRect ):$/;"	m	class:PygScreen
 displayFill	main.py	/^    def displayFill( self, color ):$/;"	m	class:PygScreen
 displayFlip	main.py	/^    def displayFlip( self ):$/;"	m	class:PygScreen
+displayNextItem	doc/_build/html/_static/searchtools.js	/^    function displayNextItem() {$/;"	f
+end	doc/make.bat	/^:end$/;"	l
+exclude_patterns	doc/conf.py	/^exclude_patterns = ['_build']$/;"	v
+excluded	doc/_build/html/_static/searchtools.js	/^    var excluded = [];$/;"	v
+extensions	doc/conf.py	/^extensions = []$/;"	v
+fileMap	doc/_build/html/_static/searchtools.js	/^    var fileMap = {};$/;"	v
+files	doc/_build/html/_static/searchtools.js	/^    var files = null;$/;"	v
+fn.autogrow	doc/_build/html/_static/websupport.js	/^(function($) {$/;"	f
 getAccele	systemData.py	/^    def getAccele( self ):$/;"	m	class:SysData
 getBallBmp	systemData.py	/^    def getBallBmp( self ):$/;"	m	class:SysData
 getBallInitSpeed	systemData.py	/^    def getBallInitSpeed(self):$/;"	m	class:SysData
@@ -42,7 +174,10 @@ getBallSpeedMin	systemData.py	/^    def getBallSpeedMin( self):$/;"	m	class:SysD
 getBallrect	ball.py	/^    def getBallrect( self ):$/;"	m	class:BallObj
 getBarBmp	systemData.py	/^    def getBarBmp( self ):$/;"	m	class:SysData
 getBarY	systemData.py	/^    def getBarY( self):$/;"	m	class:SysData
+getChildren	doc/_build/html/_static/websupport.js	/^  function getChildren(ul, recursive) {$/;"	f
+getComments	doc/_build/html/_static/websupport.js	/^  function getComments(id) {$/;"	f
 getInitSpeed	ball.py	/^    def getInitSpeed( self ):$/;"	m	class:BallObj
+getInitSpeed	siteswapContainer.py	/^    def getInitSpeed( self, siteswap ):$/;"	m	class:SiteSwapContainer
 getLeftBarX	systemData.py	/^    def getLeftBarX( self):$/;"	m	class:SysData
 getObj	ball.py	/^    def getObj( self ):$/;"	m	class:BallObj
 getObj	bar.py	/^    def getObj( self ):$/;"	m	class:BarObj
@@ -52,6 +187,8 @@ getScreenColor	systemData.py	/^    def getScreenColor( self ):$/;"	m	class:SysDa
 getScreenSizeX	systemData.py	/^    def getScreenSizeX( self ):$/;"	m	class:SysData
 getScreenSizeY	systemData.py	/^    def getScreenSizeY( self ):$/;"	m	class:SysData
 getScreenWait	systemData.py	/^    def getScreenWait( self ):$/;"	m	class:SysData
+getShootTiming	ball.py	/^    def getShootTiming( self ):$/;"	m	class:BallObj
+getSiteswap	siteswapContainer.py	/^    def getSiteswap(self):$/;"	m	class:SiteSwapContainer
 getSize	main.py	/^    def getSize( self ):$/;"	m	class:PygScreen
 getSpeed	ball.py	/^    def getSpeed( self ):$/;"	m	class:BallObj
 getSpeedX	ball.py	/^    def getSpeedX( self ):$/;"	m	class:BallObj
@@ -60,44 +197,134 @@ getState	ball.py	/^    def getState( self ):$/;"	m	class:BallObj
 getStateIdle	systemData.py	/^    def getStateIdle( self ):$/;"	m	class:SysData
 getStateLeft2Right	systemData.py	/^    def getStateLeft2Right( self ):$/;"	m	class:SysData
 getStateRight2Left	systemData.py	/^    def getStateRight2Left( self ):$/;"	m	class:SysData
+getStateWait	systemData.py	/^    def getStateWait( self ):$/;"	m	class:SysData
+getVx	siteswapContainer.py	/^    def getVx( self, siteswap, landingFlag ):$/;"	m	class:SiteSwapContainer
 getWarpBmp	systemData.py	/^    def getWarpBmp( self ):$/;"	m	class:SysData
+handleReSort	doc/_build/html/_static/websupport.js	/^  function handleReSort(link) {$/;"	f
+handleVote	doc/_build/html/_static/websupport.js	/^  function handleVote(link) {$/;"	f
+handleVote.d.comment_id	doc/_build/html/_static/websupport.js	/^      comment_id: id.substring(2),$/;"	p
+hide	doc/_build/html/_static/websupport.js	/^  function hide(id) {$/;"	f
+hideProposal	doc/_build/html/_static/websupport.js	/^  function hideProposal(id) {$/;"	f
+hideProposeChange	doc/_build/html/_static/websupport.js	/^  function hideProposeChange(id) {$/;"	f
+highlightstring	doc/_build/html/_static/searchtools.js	/^    var highlightstring = '?highlight=' + $.urlencode(hlterms.join(" "));$/;"	v
+hlterms	doc/_build/html/_static/searchtools.js	/^    var hlterms = [];$/;"	v
+html_static_path	doc/conf.py	/^html_static_path = ['_static']$/;"	v
+html_theme	doc/conf.py	/^html_theme = 'default'$/;"	v
+htmlhelp_basename	doc/conf.py	/^htmlhelp_basename = 'juggleEmudoc'$/;"	v
+idCounter	doc/_build/html/_static/underscore.js	/^  var idCounter = 0;$/;"	v
+importantResults	doc/_build/html/_static/searchtools.js	/^    var importantResults = [];$/;"	v
+init	doc/_build/html/_static/websupport.js	/^  function init() {$/;"	f
+initComparator	doc/_build/html/_static/websupport.js	/^  function initComparator() {$/;"	f
+initEvents	doc/_build/html/_static/websupport.js	/^  function initEvents() {$/;"	f
+insertComment	doc/_build/html/_static/websupport.js	/^  function insertComment(comment) {$/;"	f
 isBallAndBarConflict	objMediator.py	/^    def isBallAndBarConflict(self, ball, bar ):$/;"	m	class:Mediator
-isCorrectSpeedChange	testBounce.py	/^    def isCorrectSpeedChange( self, position, speed_before, key, speed_after ):$/;"	m	class:TestFunctions
+isCorrectSpeedChange	test/testBounce.py	/^    def isCorrectSpeedChange( self, position, speed_before, key, speed_after ):$/;"	m	class:TestFunctions
+jQuery.contains	doc/_build/html/_static/doctools.js	/^jQuery.contains = function(arr, item) {$/;"	f
+jQuery.fn.highlightText	doc/_build/html/_static/doctools.js	/^jQuery.fn.highlightText = function(text, className) {$/;"	f
+jQuery.fn.highlightText.highlight	doc/_build/html/_static/doctools.js	/^  function highlight(node) {$/;"	f
+jQuery.getQueryParameters	doc/_build/html/_static/doctools.js	/^jQuery.getQueryParameters = function(s) {$/;"	f
+jQuery.makeSearchSummary	doc/_build/html/_static/searchtools.js	/^jQuery.makeSearchSummary = function(text, keywords, hlwords) {$/;"	f
+jQuery.urldecode	doc/_build/html/_static/doctools.js	/^jQuery.urldecode = function(x) {$/;"	f
 judgeConflictBallAndBar	objMediator.py	/^    def judgeConflictBallAndBar( self, ball, bar ):$/;"	m	class:Mediator
+latex_documents	doc/conf.py	/^latex_documents = [$/;"	v
+latex_elements	doc/conf.py	/^latex_elements = {$/;"	v
 leftBarX	systemData.py	/^    leftBarX          = property( getLeftBarX )$/;"	v	class:SysData
-makeListFromKeyTuple	testBounce.py	/^    def makeListFromKeyTuple( self, keyTuple ):$/;"	m	class:TestFunctions
+limit	doc/_build/html/_static/underscore.js	/^  var limit = function(func, wait, debounce) {$/;"	f
+limit.throttler	doc/_build/html/_static/underscore.js	/^      var throttler = function() {$/;"	f
+makeContainer	siteswapContainer.py	/^    def makeContainer(self, option):$/;"	m	class:SiteSwapContainer
+makeListFromKeyTuple	test/testBounce.py	/^    def makeListFromKeyTuple( self, keyTuple ):$/;"	m	class:TestFunctions
+man_pages	doc/conf.py	/^man_pages = [$/;"	v
+master_doc	doc/conf.py	/^master_doc = 'index'$/;"	v
 mediator	main.py	/^    mediator = Mediator()$/;"	v
 moveAs2Key	ball.py	/^    def moveAs2Key( self, keyList ):$/;"	m	class:BallObj
+moveAs2Key	bar.py	/^    def moveAs2Key( self, keyList ):$/;"	m	class:BarObj
+moveRight2Left	ball.py	/^    def moveRight2Left( self, ssContainer ):$/;"	m	class:BallObj
+nativeForEach	doc/_build/html/_static/underscore.js	/^    nativeForEach      = ArrayProto.forEach,$/;"	v
+objectResults	doc/_build/html/_static/searchtools.js	/^    var objectResults = [];$/;"	v
+objectterms	doc/_build/html/_static/searchtools.js	/^    var objectterms = [];$/;"	v
+openReply	doc/_build/html/_static/websupport.js	/^  function openReply(id) {$/;"	f
+opts.acceptCommentURL	doc/_build/html/_static/websupport.js	/^    acceptCommentURL: '\/_accept_comment',$/;"	p
+opts.addCommentURL	doc/_build/html/_static/websupport.js	/^    addCommentURL: '\/_add_comment',$/;"	p
+opts.closeCommentImage	doc/_build/html/_static/websupport.js	/^    closeCommentImage: '\/static\/_static\/comment-close.png',$/;"	p
+opts.commentBrightImage	doc/_build/html/_static/websupport.js	/^    commentBrightImage: '\/static\/_static\/comment-bright.png',$/;"	p
+opts.commentImage	doc/_build/html/_static/websupport.js	/^    commentImage: '\/static\/_static\/comment.png',$/;"	p
+opts.deleteCommentURL	doc/_build/html/_static/websupport.js	/^    deleteCommentURL: '\/_delete_comment',$/;"	p
+opts.downArrow	doc/_build/html/_static/websupport.js	/^    downArrow: '\/static\/_static\/down.png',$/;"	p
+opts.downArrowPressed	doc/_build/html/_static/websupport.js	/^    downArrowPressed: '\/static\/_static\/down-pressed.png',$/;"	p
+opts.getCommentsURL	doc/_build/html/_static/websupport.js	/^    getCommentsURL: '\/_get_comments',$/;"	p
+opts.loadingImage	doc/_build/html/_static/websupport.js	/^    loadingImage: '\/static\/_static\/ajax-loader.gif',$/;"	p
+opts.moderator	doc/_build/html/_static/websupport.js	/^    moderator: false$/;"	p
+opts.processVoteURL	doc/_build/html/_static/websupport.js	/^    processVoteURL: '\/_process_vote',$/;"	p
+opts.upArrow	doc/_build/html/_static/websupport.js	/^    upArrow: '\/static\/_static\/up.png',$/;"	p
+opts.upArrowPressed	doc/_build/html/_static/websupport.js	/^    upArrowPressed: '\/static\/_static\/up-pressed.png',$/;"	p
+opts.voting	doc/_build/html/_static/websupport.js	/^    voting: false,$/;"	p
+popupTemplate	doc/_build/html/_static/websupport.js	/^  var popupTemplate = '\\$/;"	v
+previousUnderscore	doc/_build/html/_static/underscore.js	/^  var previousUnderscore = root._;$/;"	v
+project	doc/conf.py	/^project = u'juggleEmu'$/;"	v
+pull	siteswapContainer.py	/^    def pull( self ):$/;"	m	class:SiteSwapContainer
+pulse	doc/_build/html/_static/searchtools.js	/^    function pulse() {$/;"	f
+pygments_style	doc/conf.py	/^pygments_style = 'sphinx'$/;"	v
+regularResults	doc/_build/html/_static/searchtools.js	/^    var regularResults = [];$/;"	v
+release	doc/conf.py	/^release = '0.1'$/;"	v
+renderTemplate	doc/_build/html/_static/websupport.js	/^  function renderTemplate(template, context) {$/;"	f
+renderTemplate.handle	doc/_build/html/_static/websupport.js	/^    function handle(ph, escape) {$/;"	f
+replyTemplate	doc/_build/html/_static/websupport.js	/^  var replyTemplate = '\\$/;"	v
+result.computed	doc/_build/html/_static/underscore.js	/^    var result = {computed : -Infinity};$/;"	p
+result.computed	doc/_build/html/_static/underscore.js	/^    var result = {computed : Infinity};$/;"	p
+resultCount	doc/_build/html/_static/searchtools.js	/^    var resultCount = results.length;$/;"	v
+results	doc/_build/html/_static/searchtools.js	/^    var results = unimportantResults.concat(regularResults)$/;"	v
 rightBarX	systemData.py	/^    rightBarX         = property( getRightBarX )$/;"	v	class:SysData
 screen	main.py	/^    screen = PygScreen()$/;"	v
 screenColor	systemData.py	/^    screenColor       = property( getScreenColor )$/;"	v	class:SysData
 screenSizeX	systemData.py	/^    screenSizeX       = property( getScreenSizeX )$/;"	v	class:SysData
 screenSizeY	systemData.py	/^    screenSizeY       = property( getScreenSizeY )$/;"	v	class:SysData
+searchterms	doc/_build/html/_static/searchtools.js	/^    var searchterms = [];$/;"	v
 setBallrectBottom	ball.py	/^    def setBallrectBottom( self, bottomVal ):$/;"	m	class:BallObj
 setBallrectLeft	ball.py	/^    def setBallrectLeft( self, leftVal ):$/;"	m	class:BallObj
 setBallrectRight	ball.py	/^    def setBallrectRight( self, rightVal ):$/;"	m	class:BallObj
+setComparator	doc/_build/html/_static/websupport.js	/^  function setComparator() {$/;"	f
 setDisplay	main.py	/^    def setDisplay( self ):$/;"	m	class:PygScreen
 setInitSpeed	ball.py	/^    def setInitSpeed( self, initSpeed ):$/;"	m	class:BallObj
 setObj	ball.py	/^    def setObj( self, imgStr ):$/;"	m	class:BallObj
 setObj	bar.py	/^    def setObj( self, objPath ):$/;"	m	class:BarObj
-setPosition	testBounce.py	/^    def setPosition( self, $/;"	m	class:TestFunctions
+setPosition	test/testBounce.py	/^    def setPosition( self, $/;"	m	class:TestFunctions
 setRect	ball.py	/^    def setRect( self ):$/;"	m	class:BallObj
 setRect	bar.py	/^    def setRect( self ):$/;"	m	class:BarObj
 setRect_pos	ball.py	/^    def setRect_pos( self, posx, posy ):$/;"	m	class:BallObj
 setRect_pos	bar.py	/^    def setRect_pos( self, posx, posy ):$/;"	m	class:BarObj
+setShootTiming	ball.py	/^    def setShootTiming( self ):$/;"	m	class:BallObj
 setSize	main.py	/^    def setSize( self, sizeX, sizeY ):$/;"	m	class:PygScreen
 setSpeed	ball.py	/^    def setSpeed( self, speedX, speedY ):$/;"	m	class:BallObj
 setSpeedY	ball.py	/^    def setSpeedY( self, speedY ):$/;"	m	class:BallObj
 setState	ball.py	/^    def setState( self, stateNum ):$/;"	m	class:BallObj
+shootTiming	ball.py	/^    shootTiming = property( getShootTiming, setShootTiming )$/;"	v	class:BallObj
+shootTimingIncliment	ball.py	/^    def shootTimingIncliment( self ):$/;"	m	class:BallObj
+show	doc/_build/html/_static/websupport.js	/^  function show(id) {$/;"	f
+showError	doc/_build/html/_static/websupport.js	/^  function showError(message) {$/;"	f
+showProposal	doc/_build/html/_static/websupport.js	/^  function showProposal(id) {$/;"	f
+showProposeChange	doc/_build/html/_static/websupport.js	/^  function showProposeChange(id) {$/;"	f
+siteswap	siteswapContainer.py	/^    siteswap = property( getSiteswap )$/;"	v	class:SiteSwapContainer
+slice	doc/_build/html/_static/underscore.js	/^  var slice            = ArrayProto.slice,$/;"	v
+sortComments	doc/_build/html/_static/websupport.js	/^  function sortComments(comments) {$/;"	f
+source_suffix	doc/conf.py	/^source_suffix = '.rst'$/;"	v
 stateIdle	systemData.py	/^    stateIdle         = property( getStateIdle )$/;"	v	class:SysData
 stateLeft2Right	systemData.py	/^    stateLeft2Right   = property( getStateLeft2Right )$/;"	v	class:SysData
 stateRight2Left	systemData.py	/^    stateRight2Left   = property( getStateRight2Left )$/;"	v	class:SysData
+stateWait	systemData.py	/^    stateWait         = property( getStateWait )$/;"	v	class:SysData
 sysData	main.py	/^    sysData = SysData()$/;"	v
-sysData	testBounce.py	/^    sysData = SysData()$/;"	v	class:TestFunctions
-test_BallAndBarObj	testBounce.py	/^    def test_BallAndBarObj( self ):$/;"	m	class:TestFunctions
-test_barInit	testBounce.py	/^    def test_barInit(self):$/;"	m	class:TestFunctions
-test_decideBallPosition	testBounce.py	/^    def test_decideBallPosition(self):$/;"	m	class:TestFunctions
-test_moveAs2Key	testBounce.py	/^    def test_moveAs2Key(self):$/;"	m	class:TestFunctions
+sysData	test/testBounce.py	/^    sysData = SysData()$/;"	v	class:TestFunctions
+templates_path	doc/conf.py	/^templates_path = ['_templates']$/;"	v
+testMakeContainer	test/testSiteswapContainer.py	/^    def testMakeContainer(self):$/;"	m	class:TestFunctions
+testPull	test/testSiteswapContainer.py	/^    def testPull(self):$/;"	m	class:TestFunctions
+test_BallAndBarObj	test/testBounce.py	/^    def test_BallAndBarObj( self ):$/;"	m	class:TestFunctions
+test_barInit	test/testBounce.py	/^    def test_barInit(self):$/;"	m	class:TestFunctions
+test_decideBallPosition	test/testBounce.py	/^    def test_decideBallPosition(self):$/;"	m	class:TestFunctions
+test_moveAs2Key	test/testBounce.py	/^    def test_moveAs2Key(self):$/;"	m	class:TestFunctions
+texinfo_documents	doc/conf.py	/^texinfo_documents = [$/;"	v
+tmp	doc/_build/html/_static/searchtools.js	/^    var tmp = query.split(\/\\s+\/);$/;"	v
+toggleCommentMarkupBox	doc/_build/html/_static/websupport.js	/^  function toggleCommentMarkupBox(id) {$/;"	f
+unimportantResults	doc/_build/html/_static/searchtools.js	/^    var unimportantResults = [];$/;"	v
+version	doc/conf.py	/^version = '0.1'$/;"	v
 waitTime	systemData.py	/^    waitTime          = property( getScreenWait )$/;"	v	class:SysData
 warpBmp	systemData.py	/^    warpBmp           = property( getWarpBmp)$/;"	v	class:SysData
 white	main.py	/^    white   = sysData.screenColor$/;"	v

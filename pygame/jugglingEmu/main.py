@@ -38,26 +38,7 @@ if __name__ == "__main__":
                     sysData.screenSizeY)
     screen.setDisplay( )
 
-    ball1 = BallObj()
-    ball1.setSpeed( 0, 0 )
-    ball1.setObj( sysData.ballBmp )
-    ball1.setRect_pos( 60, -100 )
-
-#    ball2 = BallObj()
-#    ball2.setSpeed( 0, 0 )
-#    ball2.setObj( sysData.ballBmp )
-#    ball2.setRect_pos( 340, 100 )
-#
-#    ball3 = BallObj()
-#    ball3.setSpeed( 0, 0 )
-#    ball3.setObj( sysData.ballBmp )
-#    ball3.setRect_pos( 60, 350 )
-
-    balls = [
-             ball1
-#            ,ball2
-#            ,ball3
-            ]
+    balls = []
 
     barLeft = BarObj()
     barLeft.setObj( sysData.barBmp)
@@ -69,20 +50,46 @@ if __name__ == "__main__":
 
     mediator = Mediator()
 
+    ballMakeTiming  = 0
+    ballShootTiming = 0
     while True:
         time.sleep(sysData.waitTime)
         for event in pygame.event.get():
             if event.type == pygame.QUIT: sys.exit()
+        
+        # ボール生成部分
+        # TODO: ボール生成個数とボール射出タイミングはsysDataに移動
+        if len(balls) < 3:
+            ballMakeTiming = ballMakeTiming + 1
+            if ballMakeTiming > 22:
+                ball = BallObj()
+                ball.setSpeed( 0, 0 )
+                ball.setObj( sysData.ballBmp )
+                ball.setRect_pos( 60,-100 )
+                balls.append( ball )
+                ballMakeTiming = 0
 
+        # ボールの次のフレームの動作
         for ball in balls:
-            ball.ballMove( )
+            ball.ballMove()
             ball.decideBallPosition(pygame.key.get_pressed(), screen.getSize() )
         #print balls[0].getBallrect()
+
         # ボールとバーが衝突した際の動作
         for ball in balls:
             mediator.judgeConflictBallAndBar( ball, barRight )
             mediator.judgeConflictBallAndBar( ball, barLeft )
 
+        # ボールの射出間隔調整
+        for ball in balls:
+            if ball.getState() == sysData.stateWait:
+                ball.shootTimingIncliment()
+                break
+
+        # キーが押されたときバーを移動
+        barLeft.moveAs2Key( pygame.key.get_pressed())
+
+        # 表示
         screen.displayFill( white )
         for ball in balls:
             screen.displayBlit( ball.getObj(), ball.getBallrect() )

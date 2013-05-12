@@ -10,10 +10,10 @@ class SysData():
         self._ballInitSpeed_MIN = 0
         self._leftBarX          = 60
         self._rightBarX         = 340
-        self._barY              = 700
+        self._screenSizeY       = 650
+        self._barY              = self._screenSizeY - 50
         self._screenColor       = 255,255,255
         self._screenSizeX       = 400
-        self._screenSizeY       = 800
         self._ballBmp           = "img/ball.bmp"
         self._barBmp            = "img/bar.bmp"
         self._warpBMP           = "img/warp.bmp"
@@ -21,8 +21,9 @@ class SysData():
         self._accele            = 0.3
         # 状態設定値
         self._stateIdle         = 0
-        self._stateLeft2Right    = 1
-        self._stateRight2Left    = -1
+        self._stateWait         = 1
+        self._stateLeft2Right   = 2
+        self._stateRight2Left   = 3
     def getBallInitSpeed(self):
         return self._ballInitSpeed
     def getBallSpeed(self):
@@ -55,6 +56,8 @@ class SysData():
         return self._accele
     def getStateIdle( self ):
         return self._stateIdle
+    def getStateWait( self ):
+        return self._stateWait
     def getStateLeft2Right( self ):
         return self._stateLeft2Right
     def getStateRight2Left( self ):
@@ -75,6 +78,7 @@ class SysData():
     waitTime          = property( getScreenWait )
     accele            = property( getAccele )
     stateIdle         = property( getStateIdle )
+    stateWait         = property( getStateWait )
     stateLeft2Right   = property( getStateLeft2Right )
     stateRight2Left   = property( getStateRight2Left )
 

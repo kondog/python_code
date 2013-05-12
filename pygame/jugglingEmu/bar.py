@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
 
 import pygame
+from pygame.locals import *
+from systemData    import SysData
 
 class BarObj():
     def __init__( self ):
@@ -10,6 +12,7 @@ class BarObj():
         self._barrect       = None
         self._initSpeed_MAX = None
         self._initSpeed_MIN = None
+        self.sysData = SysData()
 
     def setObj( self, objPath ):
         self._barObj = pygame.image.load( objPath )
@@ -21,5 +24,11 @@ class BarObj():
         return self._barrect
     def setRect_pos( self, posx, posy ):
         self._barrect = self._barObj.get_rect( center = (posx, posy ))
+    def moveAs2Key( self, keyList ):
+        if keyList[K_LEFT]:
+            self.setRect_pos( self.sysData.leftBarX, self.sysData.barY )
+        if keyList[K_RIGHT]:
+            self.setRect_pos( self.sysData.leftBarX + 100, self.sysData.barY )
+
 
 

@@ -14,6 +14,7 @@ class BallObj():
         self._initSpeed_MAX = self.sysData.ballInitSpeed_MAX
         self._initSpeed_MIN = self.sysData.ballInitSpeed_MIN
         self._state         = self.sysData.stateIdle
+        self._shootTiming   = 0
     # Obj
     def setObj( self, imgStr ):
         self._ballObj = pygame.image.load( imgStr )
@@ -59,32 +60,58 @@ class BallObj():
         self._state = stateNum
     def getState( self ):
         return self._state
-    def changeState( self ):
+    def changeState( self, ssContainer ):
         # 通常状態
         if self.sysData.stateIdle == self._state:
             self.setState( self.sysData.stateLeft2Right )
             self.setSpeedY( 0 )
-            self.setRect_pos( 340, 690 )
+            self.setRect_pos( self.sysData.rightBarX
+                            , self.sysData.barY - 10 )
         # 左から右
         elif self.sysData.stateLeft2Right == self.getState():
-            self.setState( self.sysData.stateRight2Left )
+            self._shootTiming = 0
+            self.setState( self.sysData.stateWait )
             # 衝突した時に左手から右手にワープ(Todo:ワープは変更したい)
-            self.setSpeedY( 0 )
-            self.setRect_pos( 340, 690 )
+            self.setSpeed( 0,0 )
+            self.setRect_pos( self.sysData.rightBarX + 20
+                            , self.sysData.barY - 20 )
+        # 待機状態
+        elif self.sysData.stateWait == self.getState():
+            if self._shootTiming > 25:
+                self._shootTiming = 0
+                self.setState( self.sysData.stateRight2Left )
+                self.setRect_pos( self.sysData.rightBarX
+                                , self.sysData.barY - 10 )
         # 右から左
         elif self.sysData.stateRight2Left == self.getState():
-            import random
-            self.setState( self.sysData.stateLeft2Right )
-            # HACK:横に飛ぶスピードを決定する
-            barDistance = self.sysData.rightBarX - self.sysData.leftBarX
-            while True:
-                initSpeed = - random.randint( 3, 20 )
-                if ( 10000 * barDistance / 3.2 ) % ( initSpeed *2 ) == 0:
-                    break
-            self.setSpeed( 
-                     ( ( barDistance / 3.2 ) / ( initSpeed *2 ) )
-                    ,initSpeed )
-            print initSpeed
+            self.moveRight2Left( ssContainer )
+
+    #shootTiming
+    def getShootTiming( self ):
+        return self._shootTiming
+    def setShootTiming( self ):
+        self._shootTiming = self._shootTiming+1
+    shootTiming = property( getShootTiming, setShootTiming )
+    def shootTimingIncliment( self ):
+        self._shootTiming = self._shootTiming+1
+
+    def moveRight2Left( self, ssContainer ):
+        import random
+        import time
+        self.setState( self.sysData.stateLeft2Right )
+        # HACK:横に飛ぶスピードを決定する
+        # 発射時の初速度をサイトスワップに従って決定
+        siteswap = ssContainer.pull()
+        initSpeed = ssContainer.getInitSpeed( siteswap )
+
+        # ボールの着地点を決定
+        landingFlag = random.randint(0,1) 
+
+        # 初速度とボールの着地点から横軸の速度を算出
+        xSpeed = ssContainer.getVx( siteswap, landingFlag )
+        self.setSpeed( -1.0*xSpeed ,-1.0*initSpeed )
+        print "moveRight2Left siteswap, xSpeed, initSpeed"
+        print str(siteswap) + ", " + str(xSpeed) + ", " + str(initSpeed)
 
     # 次のスクリーンのボールの位置を決定する
     def decideBallPosition( self, keyList, size):
@@ -96,6 +123,9 @@ class BallObj():
             self._speed[0] = -self._speed[0]
         if self._ballrect.bottom >= size[1]:
             self._speed[1] = self._initSpeed
+        # 待機状態の時はボールを動かさない
+        if self.sysData.stateWait == self.getState():
+            pass
         # デフォルト動作
         else:
             self._speed[1] = self._speed[1] + self.sysData.accele 

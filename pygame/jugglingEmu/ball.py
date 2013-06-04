@@ -74,19 +74,20 @@ class BallObj():
             # 衝突した時に左手から右手にワープ(Todo:ワープは変更したい)
             self.setSpeed( 0,0 )
             self.setRect_pos( self.sysData.rightBarX + 20
-                            , self.sysData.barY - 20 )
+                            , self.sysData.barY - 30 )
         # 待機状態
         elif self.sysData.stateWait == self.getState():
             if self._shootTiming > 25:
                 self._shootTiming = 0
                 self.setState( self.sysData.stateRight2Left )
                 self.setRect_pos( self.sysData.rightBarX
-                                , self.sysData.barY - 10 )
+                                , self.sysData.barY - 15 )
         # 右から左
         elif self.sysData.stateRight2Left == self.getState():
             self.moveRight2Left( ssContainer )
 
     #shootTiming
+    # TODO:射出時間は多分もっとスマートに実装した方がいい。別のクラス持たせるとか。
     def getShootTiming( self ):
         return self._shootTiming
     def setShootTiming( self ):
@@ -109,7 +110,7 @@ class BallObj():
 
         # 初速度とボールの着地点から横軸の速度を算出
         xSpeed = ssContainer.getVx( siteswap, landingFlag )
-        self.setSpeed( -1.0*xSpeed ,-1.0*initSpeed )
+        self.setSpeed( -1*xSpeed ,-1*initSpeed )
         print "moveRight2Left siteswap, xSpeed, initSpeed"
         print str(siteswap) + ", " + str(xSpeed) + ", " + str(initSpeed)
 

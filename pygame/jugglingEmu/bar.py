@@ -28,7 +28,7 @@ class BarObj():
         if keyList[K_LEFT]:
             self.setRect_pos( self.sysData.leftBarX, self.sysData.barY )
         if keyList[K_RIGHT]:
-            self.setRect_pos( self.sysData.leftBarX + 100, self.sysData.barY )
+            self.setRect_pos( self.sysData.leftBarX + 200, self.sysData.barY )
 
 
 

@@ -18,6 +18,7 @@ Contents:
    :maxdepth: 2
 
    BallMove
+   ScreenManage
 
 Indices and tables
 ==================

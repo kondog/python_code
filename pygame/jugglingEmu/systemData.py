@@ -8,16 +8,16 @@ class SysData():
         self._ballSpeed         = [0,0]
         self._ballInitSpeed_MAX = -15
         self._ballInitSpeed_MIN = 0
-        self._leftBarX          = 60
-        self._rightBarX         = 340
+        self._leftBarX          = 60*2
+        self._rightBarX         = 340*2
         self._screenSizeY       = 650
-        self._barY              = self._screenSizeY - 50
+        self._barY              = self._screenSizeY*2 - 50
         self._screenColor       = 255,255,255
         self._screenSizeX       = 400
         self._ballBmp           = "img/ball.bmp"
         self._barBmp            = "img/bar.bmp"
         self._warpBMP           = "img/warp.bmp"
-        self._waitTime          = 0.015
+        self._waitTime          = 100
         self._accele            = 0.3
         # 状態設定値
         self._stateIdle         = 0

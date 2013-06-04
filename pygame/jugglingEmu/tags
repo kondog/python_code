@@ -25,7 +25,7 @@ PAPER	doc/make.bat	/^	echo.  latex      to make LaTeX files, you can set PAPER=a
 PAPEROPT_a4	doc/Makefile	/^PAPEROPT_a4     = -D latex_paper_size=a4$/;"	m
 PAPEROPT_letter	doc/Makefile	/^PAPEROPT_letter = -D latex_paper_size=letter$/;"	m
 PLURAL_EXPR	doc/_build/html/_static/doctools.js	/^    this.PLURAL_EXPR = new Function('n', 'return +(' + catalog.plural_expr + ')');$/;"	f
-PygScreen	main.py	/^class PygScreen():$/;"	c
+PygScreen	screen.py	/^class PygScreen():$/;"	c
 SPHINXBUILD	doc/Makefile	/^SPHINXBUILD   = sphinx-build$/;"	m
 SPHINXBUILD	doc/make.bat	/^	set SPHINXBUILD=sphinx-build$/;"	v
 SPHINXOPTS	doc/Makefile	/^SPHINXOPTS    =$/;"	m
@@ -124,18 +124,21 @@ _.wrap	doc/_build/html/_static/underscore.js	/^  _.wrap = function(func, wrapper
 _.zip	doc/_build/html/_static/underscore.js	/^  _.zip = function() {$/;"	f
 __init__	ball.py	/^    def __init__(self):$/;"	m	class:BallObj
 __init__	bar.py	/^    def __init__( self ):$/;"	m	class:BarObj
-__init__	main.py	/^    def __init__(self):$/;"	m	class:PygScreen
 __init__	objMediator.py	/^    def __init__(self):$/;"	m	class:Mediator
+__init__	screen.py	/^    def __init__(self):$/;"	m	class:PygScreen
 __init__	siteswapContainer.py	/^    def __init__( self ):$/;"	m	class:SiteSwapContainer
 __init__	systemData.py	/^    def __init__(self):$/;"	m	class:SysData
 accele	systemData.py	/^    accele            = property( getAccele )$/;"	v	class:SysData
 acceptComment	doc/_build/html/_static/websupport.js	/^  function acceptComment(id) {$/;"	f
 addComment	doc/_build/html/_static/websupport.js	/^  function addComment(form) {$/;"	f
 appendComments	doc/_build/html/_static/websupport.js	/^  function appendComments(comments, ul) {$/;"	f
+ball	main.py	/^                ball = BallObj()$/;"	v
 ballBmp	systemData.py	/^    ballBmp           = property( getBallBmp )$/;"	v	class:SysData
 ballInitSpeed	systemData.py	/^    ballInitSpeed     = property( getBallInitSpeed )$/;"	v	class:SysData
 ballInitSpeed_MAX	systemData.py	/^    ballInitSpeed_MAX = property( getBallSpeedMax )$/;"	v	class:SysData
 ballInitSpeed_MIN	systemData.py	/^    ballInitSpeed_MIN = property( getBallSpeedMin )$/;"	v	class:SysData
+ballMakeTiming	main.py	/^                ballMakeTiming = 0$/;"	v
+ballMakeTiming	main.py	/^            ballMakeTiming = ballMakeTiming + 1$/;"	v
 ballMakeTiming	main.py	/^    ballMakeTiming  = 0$/;"	v
 ballMove	ball.py	/^    def ballMove( self ):$/;"	m	class:BallObj
 ballShootTiming	main.py	/^    ballShootTiming = 0$/;"	v
@@ -147,6 +150,7 @@ barRight	main.py	/^    barRight = BarObj()$/;"	v
 barY	systemData.py	/^    barY              = property( getBarY )$/;"	v	class:SysData
 breaker	doc/_build/html/_static/underscore.js	/^  var breaker = {};$/;"	v
 changeState	ball.py	/^    def changeState( self, ssContainer ):$/;"	m	class:BallObj
+clock	main.py	/^    clock = pygame.time.Clock()$/;"	v
 closeReply	doc/_build/html/_static/websupport.js	/^  function closeReply(id) {$/;"	f
 commentTemplate	doc/_build/html/_static/websupport.js	/^  var commentTemplate = '\\$/;"	v
 comp	doc/_build/html/_static/websupport.js	/^      comp = function(a, b) { return a[i] - b[i]; };$/;"	f
@@ -154,10 +158,10 @@ copyright	doc/conf.py	/^copyright = u'2013, kondog'$/;"	v
 createCommentDiv	doc/_build/html/_static/websupport.js	/^  function createCommentDiv(comment) {$/;"	f
 decideBallPosition	ball.py	/^    def decideBallPosition( self, keyList, size):$/;"	m	class:BallObj
 deleteComment	doc/_build/html/_static/websupport.js	/^  function deleteComment(id) {$/;"	f
-displayBlit	main.py	/^    def displayBlit( self, ballObj, ballRect ):$/;"	m	class:PygScreen
-displayFill	main.py	/^    def displayFill( self, color ):$/;"	m	class:PygScreen
-displayFlip	main.py	/^    def displayFlip( self ):$/;"	m	class:PygScreen
+displayBlit	screen.py	/^    def displayBlit( self, ballObj, ballRect ):$/;"	m	class:PygScreen
+displayFill	screen.py	/^    def displayFill( self, color ):$/;"	m	class:PygScreen
 displayNextItem	doc/_build/html/_static/searchtools.js	/^    function displayNextItem() {$/;"	f
+drawScreen	main.py	/^    drawScreen = PygScreen()$/;"	v
 end	doc/make.bat	/^:end$/;"	l
 exclude_patterns	doc/conf.py	/^exclude_patterns = ['_build']$/;"	v
 excluded	doc/_build/html/_static/searchtools.js	/^    var excluded = [];$/;"	v
@@ -176,6 +180,7 @@ getBarBmp	systemData.py	/^    def getBarBmp( self ):$/;"	m	class:SysData
 getBarY	systemData.py	/^    def getBarY( self):$/;"	m	class:SysData
 getChildren	doc/_build/html/_static/websupport.js	/^  function getChildren(ul, recursive) {$/;"	f
 getComments	doc/_build/html/_static/websupport.js	/^  function getComments(id) {$/;"	f
+getDisplay	screen.py	/^    def getDisplay( self ):$/;"	m	class:PygScreen
 getInitSpeed	ball.py	/^    def getInitSpeed( self ):$/;"	m	class:BallObj
 getInitSpeed	siteswapContainer.py	/^    def getInitSpeed( self, siteswap ):$/;"	m	class:SiteSwapContainer
 getLeftBarX	systemData.py	/^    def getLeftBarX( self):$/;"	m	class:SysData
@@ -189,7 +194,7 @@ getScreenSizeY	systemData.py	/^    def getScreenSizeY( self ):$/;"	m	class:SysDa
 getScreenWait	systemData.py	/^    def getScreenWait( self ):$/;"	m	class:SysData
 getShootTiming	ball.py	/^    def getShootTiming( self ):$/;"	m	class:BallObj
 getSiteswap	siteswapContainer.py	/^    def getSiteswap(self):$/;"	m	class:SiteSwapContainer
-getSize	main.py	/^    def getSize( self ):$/;"	m	class:PygScreen
+getSize	screen.py	/^    def getSize( self ):$/;"	m	class:PygScreen
 getSpeed	ball.py	/^    def getSpeed( self ):$/;"	m	class:BallObj
 getSpeedX	ball.py	/^    def getSpeedX( self ):$/;"	m	class:BallObj
 getSpeedY	ball.py	/^    def getSpeedY( self ):$/;"	m	class:BallObj
@@ -231,6 +236,7 @@ latex_elements	doc/conf.py	/^latex_elements = {$/;"	v
 leftBarX	systemData.py	/^    leftBarX          = property( getLeftBarX )$/;"	v	class:SysData
 limit	doc/_build/html/_static/underscore.js	/^  var limit = function(func, wait, debounce) {$/;"	f
 limit.throttler	doc/_build/html/_static/underscore.js	/^      var throttler = function() {$/;"	f
+mainScreen	main.py	/^    mainScreen = PygScreen()$/;"	v
 makeContainer	siteswapContainer.py	/^    def makeContainer(self, option):$/;"	m	class:SiteSwapContainer
 makeListFromKeyTuple	test/testBounce.py	/^    def makeListFromKeyTuple( self, keyTuple ):$/;"	m	class:TestFunctions
 man_pages	doc/conf.py	/^man_pages = [$/;"	v
@@ -274,7 +280,6 @@ result.computed	doc/_build/html/_static/underscore.js	/^    var result = {comput
 resultCount	doc/_build/html/_static/searchtools.js	/^    var resultCount = results.length;$/;"	v
 results	doc/_build/html/_static/searchtools.js	/^    var results = unimportantResults.concat(regularResults)$/;"	v
 rightBarX	systemData.py	/^    rightBarX         = property( getRightBarX )$/;"	v	class:SysData
-screen	main.py	/^    screen = PygScreen()$/;"	v
 screenColor	systemData.py	/^    screenColor       = property( getScreenColor )$/;"	v	class:SysData
 screenSizeX	systemData.py	/^    screenSizeX       = property( getScreenSizeX )$/;"	v	class:SysData
 screenSizeY	systemData.py	/^    screenSizeY       = property( getScreenSizeY )$/;"	v	class:SysData
@@ -283,7 +288,7 @@ setBallrectBottom	ball.py	/^    def setBallrectBottom( self, bottomVal ):$/;"	m	
 setBallrectLeft	ball.py	/^    def setBallrectLeft( self, leftVal ):$/;"	m	class:BallObj
 setBallrectRight	ball.py	/^    def setBallrectRight( self, rightVal ):$/;"	m	class:BallObj
 setComparator	doc/_build/html/_static/websupport.js	/^  function setComparator() {$/;"	f
-setDisplay	main.py	/^    def setDisplay( self ):$/;"	m	class:PygScreen
+setDisplay	screen.py	/^    def setDisplay( self ):$/;"	m	class:PygScreen
 setInitSpeed	ball.py	/^    def setInitSpeed( self, initSpeed ):$/;"	m	class:BallObj
 setObj	ball.py	/^    def setObj( self, imgStr ):$/;"	m	class:BallObj
 setObj	bar.py	/^    def setObj( self, objPath ):$/;"	m	class:BarObj
@@ -293,7 +298,7 @@ setRect	bar.py	/^    def setRect( self ):$/;"	m	class:BarObj
 setRect_pos	ball.py	/^    def setRect_pos( self, posx, posy ):$/;"	m	class:BallObj
 setRect_pos	bar.py	/^    def setRect_pos( self, posx, posy ):$/;"	m	class:BarObj
 setShootTiming	ball.py	/^    def setShootTiming( self ):$/;"	m	class:BallObj
-setSize	main.py	/^    def setSize( self, sizeX, sizeY ):$/;"	m	class:PygScreen
+setSize	screen.py	/^    def setSize( self, sizeX, sizeY ):$/;"	m	class:PygScreen
 setSpeed	ball.py	/^    def setSpeed( self, speedX, speedY ):$/;"	m	class:BallObj
 setSpeedY	ball.py	/^    def setSpeedY( self, speedY ):$/;"	m	class:BallObj
 setState	ball.py	/^    def setState( self, stateNum ):$/;"	m	class:BallObj

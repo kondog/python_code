@@ -11,6 +11,18 @@ from screen        import PygScreen
 from objMediator   import Mediator
 from systemData    import SysData
 
+def choiceBiggestShootTiming( balls ):
+    result = None
+    # 全てのボールの中からボールを抽出。
+    # 待機状態かつ最大の射出間隔値。無ければNoneを返す。
+    for ball in balls:
+        if ball.getState() == sysData.stateWait:
+            if result == None:
+                result = ball
+            elif ball.getShootTiming() > result.getShootTiming():
+                result = ball
+    return result
+
 if __name__ == "__main__":
     sysData = SysData()
     white   = sysData.screenColor
@@ -41,7 +53,8 @@ if __name__ == "__main__":
 
     clock = pygame.time.Clock()
     while True:
-        clock.tick(sysData.waitTime)
+        #clock.tick(sysData.waitTime)
+        print clock.tick_busy_loop(sysData.waitTime)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT: sys.exit()
@@ -71,10 +84,9 @@ if __name__ == "__main__":
             mediator.judgeConflictBallAndBar( ball, barLeft )
 
         # ボールの射出間隔調整
-        for ball in balls:
-            if ball.getState() == sysData.stateWait:
-                ball.shootTimingIncliment()
-                break
+        biggest = choiceBiggestShootTiming(balls)
+        if biggest != None:
+            biggest.shootTimingIncliment()
 
         # キーが押されたときバーを移動
         barLeft.moveAs2Key( pygame.key.get_pressed())
@@ -86,4 +98,5 @@ if __name__ == "__main__":
         screen.displayBlit( barRight.getObj(), barRight.getRect() )
         screen.displayBlit( barLeft.getObj(),  barLeft.getRect() )
         pygame.display.flip()
+
 

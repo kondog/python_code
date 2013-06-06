@@ -15,7 +15,7 @@ class SysData():
         self._ballBmp           = "img/ball.bmp"
         self._barBmp            = "img/bar.bmp"
         self._warpBMP           = "img/warp.bmp"
-        self._waitTime          = 100
+        self._waitTime          = 40
         self._accele            = 0.9
         # 状態設定値
         self._stateIdle         = 0

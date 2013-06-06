@@ -50,7 +50,7 @@ if __name__ == "__main__":
         # TODO: ボール生成個数とボール射出タイミングはsysDataに移動
         if len(balls) < 3:
             ballMakeTiming = ballMakeTiming + 1
-            if ballMakeTiming > 22:
+            if ballMakeTiming > 25:
                 ball = BallObj()
                 ball.setSpeed( 0, 0 )
                 ball.setObj( sysData.ballBmp )

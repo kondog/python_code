@@ -3,8 +3,6 @@
 class SysData():
     def __init__(self):
         self._ballInitSpeed     = -20
-        #self._ballInitSpeed     = -14
-        #self._ballInitSpeed     = -5
         self._ballSpeed         = [0,0]
         self._ballInitSpeed_MAX = -15
         self._ballInitSpeed_MIN = 0
@@ -18,7 +16,7 @@ class SysData():
         self._barBmp            = "img/bar.bmp"
         self._warpBMP           = "img/warp.bmp"
         self._waitTime          = 100
-        self._accele            = 0.3
+        self._accele            = 0.9
         # 状態設定値
         self._stateIdle         = 0
         self._stateWait         = 1
